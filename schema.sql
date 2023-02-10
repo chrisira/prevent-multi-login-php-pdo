@@ -1,0 +1,14 @@
+CREATE DATABASE db_hanomedia;
+
+USE db_hanomedia;
+
+CREATE TABLE users
+(
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    names VARCHAR(200) NOT NULL,
+    email VARCHAR(200) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    user_session_id  VARCHAR(255) NOT NULL,
+    createdAt TIMESTAMP DEFAULT NOW(),
+    updatedAt TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
+);
